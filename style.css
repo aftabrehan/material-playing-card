@@ -346,3 +346,241 @@ body {
 .card .content.king span.black:after {
   background: #35424a;
 }
+
+/* Animation Level: 1 */
+.card {
+  position: relative;
+  margin: 0 auto 100px;
+  -webkit-animation: card 1s ease;
+  animation: card 1s ease;
+}
+.card .panel {
+  -webkit-animation: slideInTop 3s ease;
+  animation: slideInTop 3s ease;
+}
+.card .panel:last-child {
+  -webkit-animation: slideInBottom 3s ease;
+  animation: slideInBottom 3s ease;
+}
+.card .panel .rank {
+  -webkit-animation: fadeInBottom 4s ease;
+  animation: fadeInBottom 4s ease;
+}
+.card .panel .suit {
+  -webkit-animation: fadeInRight 4s ease;
+  animation: fadeInRight 4s ease;
+}
+.card .panel .icon {
+  -webkit-animation: scaleIn 3s ease;
+  animation: scaleIn 3s ease;
+}
+.card .content {
+  -webkit-animation: spinIn 3s ease;
+  animation: spinIn 3s ease;
+}
+.card .ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #f7f7f7;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  margin: -15px 0 0 -15px;
+  -webkit-animation: ripple 1.5s ease;
+  animation: ripple 1.5s ease;
+  opacity: 0;
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+.card .ripple:nth-child(2) {
+  background: #ffffff;
+  -webkit-animation-delay: 1.3s;
+  animation-delay: 1.3s;
+}
+
+/* Keyframes */
+@-webkit-keyframes card {
+  0% {
+    transform: translateY(200%) rotate(90deg);
+  }
+}
+@keyframes card {
+  0% {
+    transform: translateY(200%) rotate(90deg);
+  }
+}
+@-webkit-keyframes ripple {
+  0% {
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50);
+    opacity: 0;
+  }
+}
+@keyframes ripple {
+  0% {
+    display: block;
+    transform: scale(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes spinIn {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  66% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes spinIn {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  66% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  90% {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(0);
+  }
+}
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(0);
+  }
+}
+@-webkit-keyframes slideInTop {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  66% {
+    top: -200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes slideInTop {
+  0% {
+    top: -200px;
+    opacity: 0;
+  }
+  66% {
+    top: -200px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes slideInBottom {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  66% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@keyframes slideInBottom {
+  0% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  66% {
+    bottom: -200px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+@-webkit-keyframes fadeInBottom {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+}
+@keyframes fadeInBottom {
+  0% {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeInRight {
+  0% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes buttonFadeInUp {
+  0% {
+    bottom: 30px;
+    opacity: 0;
+  }
+}
+@keyframes buttonFadeInUp {
+  0% {
+    bottom: 30px;
+    opacity: 0;
+  }
+}
